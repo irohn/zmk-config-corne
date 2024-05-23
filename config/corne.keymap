@@ -19,10 +19,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E             &kp R      &kp T    &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &kp S  &kp D             &kp F      &kp G    &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C             &kp V      &kp B    &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_GUI
-                          &kp LEFT_CONTROL  &kp SPACE  &mo 1    &mo 2  &kp ENTER  &kp RALT
+&kp TAB     &kp Q  &kp W  &kp E             &kp R         &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
+&kp ESCAPE  &kp A  &kp S  &kp D             &kp F         &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C             &kp V         &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LEFT_CONTROL  &kp LEFT_ALT  &kp SPACE    &kp ENTER  &mo 1  &kp LEFT_WIN
             >;
         };
 
@@ -34,10 +34,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE   &kp N1  &kp N2  &kp N3            &kp N4     &kp N5    &kp N6    &kp N7      &kp N8    &kp N9     &kp N0  &kp BSPC
-&kp ESCAPE  &trans  &trans  &trans            &trans     &trans    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans  &trans  &trans            &trans     &trans    &trans    &trans      &trans    &trans     &trans  &kp LEFT_WIN
-                            &kp LEFT_CONTROL  &kp SPACE  &trans    &trans    &kp RETURN  &kp RALT
+&kp GRAVE   &kp N1          &kp N2            &kp N3                &kp N4                 &kp N5       &kp N6     &kp N7     &kp N8        &kp N9     &kp N0         &kp BSPC
+&kp ESCAPE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &tog 3       &kp LEFT   &kp DOWN   &kp UP        &kp RIGHT  &kp BACKSLASH  &kp PIPE
+&kp LSHFT   &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &tog 4       &kp UNDER  &kp MINUS  &kp EQUAL     &kp PLUS   &trans         &kp RIGHT_SHIFT
+                                              &kp LEFT_CONTROL      &mo 2                  &kp SPACE    &kp ENTER  &trans     &kp LEFT_WIN
             >;
         };
 
@@ -49,10 +49,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE   &kp EXCL  &kp AT  &kp HASH          &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp ESCAPE  &trans    &trans  &trans            &trans     &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT   &trans    &trans  &trans            &trans     &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp LEFT_WIN
-                              &kp LEFT_CONTROL  &kp SPACE  &trans       &trans     &kp ENTER  &kp RALT
+&kp TILDE   &kp EXCL  &kp AT  &kp HASH          &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS    &kp ASTRK     &kp LPAR       &kp RPAR  &kp BSPC
+&kp ESCAPE  &trans    &trans  &trans            &trans    &trans       &trans     &kp INSERT  &kp HOME      &kp PAGE_UP    &trans    &trans
+&kp LSHFT   &trans    &trans  &trans            &trans    &trans       &trans     &kp DELETE  &kp END       &kp PAGE_DOWN  &trans    &kp RSHIFT
+                              &kp LEFT_CONTROL  &trans    &kp SPACE    &kp ENTER  &trans      &kp LEFT_WIN
+            >;
+        };
+
+        calc_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_EQUAL   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_DIVIDE  &kp KP_MULTIPLY
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS   &kp KP_PLUS
+&trans  &trans  &trans  &trans  &trans  &trans    &trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_DOT     &kp KP_ENTER
+                        &trans  &trans  &trans    &kp BACKSPACE  &trans        &kp NUMBER_0
+            >;
+        };
+
+        function_layer {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
